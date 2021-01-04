@@ -6,7 +6,6 @@ import {local} from 'wix-storage';
 import wixLocation from 'wix-location';
 
 const sparePartItemsRepeater = "#sparePartItemsRepeater";
-var searchResultItems = [];
 
 $w.onReady(function () {	
 
@@ -28,7 +27,6 @@ export function searchSpareParts(vehicleId){
 		var labelText = "(" + results.items.length + " found)"
 		$w("#resultsCountLabel").text = labelText;
 		$w(sparePartItemsRepeater).show();
-		searchResultItems = results.items;
 		$w(sparePartItemsRepeater).data = results.items
 		} 
 		else {
